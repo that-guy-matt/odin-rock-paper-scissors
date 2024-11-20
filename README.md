@@ -1,0 +1,1 @@
+This is my submission for the Rock Paper Scissors project for The Odin Project. This project demonstrates basic knowledge of JavaScript. 
