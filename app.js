@@ -7,11 +7,38 @@ function playRound(humanChoice, getComputerChoice){
 }
 
 function getComputerChoice(){
-    return(Math.floor(Math.random()*3+1));
+    let compChoice = Math.floor(Math.random()*3+1);
+    switch (compChoice){
+        case 1:
+            return("rock");
+            break;
+        case 2:
+            return("paper");
+            break;
+        case 3:
+            return("scissors");
+            break;
+        default:
+            return("0");
+    }
 }
 
 function getHumanChoice() {
-    return(prompt("Input your choice: 1: Rock, 2: Paper, 3: Scissors"));
+    let humanChoice = prompt("Input your choice (Rock, Paper, or Scissors):");
+    switch (humanChoice.toLowerCase()){
+        case "rock":
+            return("rock");
+            break;
+        case "paper":
+            return("paper");
+            break;
+        case "scissors":
+            return("scissors");
+            break;
+        default:
+            alert("Your input must be one of the following: Rock, Paper, or Scissors");
+            return getHumanChoice();
+    }
 }
 
 const humanChoice = getHumanChoice();
